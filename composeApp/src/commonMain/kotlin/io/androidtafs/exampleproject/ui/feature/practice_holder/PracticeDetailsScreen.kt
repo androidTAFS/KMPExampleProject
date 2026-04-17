@@ -31,6 +31,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_3.MemeRoute
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_3.MemeScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_screen.DialogScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_screen.PetCollectorScreen
 import io.androidtafs.exampleproject.ui.feature.practice_holder.task_screen.TaskNotFound
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -118,6 +122,9 @@ fun PracticeDetailsScreen(
 @Composable
 fun StudentTaskPicker(taskId: Int) {
     when (taskId) {
+        1 -> DialogScreen()
+        2 -> PetCollectorScreen()
+        3 -> MemeRoute()
         else -> TaskNotFound()
     }
 }

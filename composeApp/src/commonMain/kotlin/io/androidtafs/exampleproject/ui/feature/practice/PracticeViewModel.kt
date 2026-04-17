@@ -14,6 +14,8 @@ class PracticeViewModel : ViewModel() {
         _uiState.update { it.copy(isLoading = true) }
         val mockTasks = listOf(
             PracticeTask(1, "Привет, Compose!", "Составте экран, данный мной", "📝"),
+            PracticeTask(2, "LazyColumn", "Составте экран, данный мной", "📝"),
+            PracticeTask(3, "Screen/Route/Viewmodel", "Составте экран, данный мной", "📝"),
         )
         _uiState.update { it.copy(tasks = mockTasks, isLoading = false) }
     }

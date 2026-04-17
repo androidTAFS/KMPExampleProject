@@ -116,7 +116,6 @@ fun LessonDetailsScreen(
                         Text("Назад", style = MaterialTheme.typography.labelLarge)
                     }
 
-                    // Кнопка Далее или К практике
                     if (state.isLastSlide) {
                         Button(
                             onClick = { onAction(LessonDetailsAction.OnGoToPractice(state.practiceId)) },
@@ -241,7 +240,6 @@ private fun CodeBlock(code: String) {
             )
         }
 
-        // Само тело кода
         Text(
             text = code,
             modifier = Modifier

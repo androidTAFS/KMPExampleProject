@@ -11,10 +11,8 @@ fun PracticeDetailsRoute(
     viewModel: PracticeDetailsViewModel = viewModel { PracticeDetailsViewModel(taskId) },
     onBack: () -> Unit
 ) {
-    val state by viewModel.uiState.collectAsStateWithLifecycle()
-
     PracticeDetailsScreen(
-        title = state.title,
+        title = taskId.toString(),
         taskId = taskId,
         onBack = onBack
     )
