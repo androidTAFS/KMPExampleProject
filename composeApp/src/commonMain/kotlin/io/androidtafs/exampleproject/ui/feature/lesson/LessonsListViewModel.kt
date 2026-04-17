@@ -19,6 +19,8 @@ class LessonsListViewModel : ViewModel() {
 
         val mockLessonPreviews = listOf(
             LessonPreview(1, "Привет, Android!", "Первое приложение и знакомство с IDE", "🚀"),
+            LessonPreview(2, "Ленивые элементы", "Знакомство с оптимизацией списков", "\uD83C\uDFEE"),
+            LessonPreview(2, "ViewModel, Route, Screen", "Основы архитектуры UI", "\uD83C\uDF1A"),
         )
 
         _uiState.update { it.copy(lessonPreviews = mockLessonPreviews, isLoading = false) }
