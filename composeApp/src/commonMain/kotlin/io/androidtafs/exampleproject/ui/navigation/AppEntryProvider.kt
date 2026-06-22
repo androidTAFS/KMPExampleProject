@@ -14,6 +14,8 @@ import io.androidtafs.exampleproject.ui.feature.lesson_details.LessonDetailsRout
 import io.androidtafs.exampleproject.ui.feature.main.MainViewModel
 import io.androidtafs.exampleproject.ui.feature.practice.PracticeRoute
 import io.androidtafs.exampleproject.ui.feature.practice_holder.PracticeDetailsRoute
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.SolarHarvesterScreen
+import io.androidtafs.exampleproject.ui.feature.promo.FinalPromoBanner
 
 @Composable
 fun rememberEntryProvider(mainViewModel: MainViewModel): (NavKey) -> NavEntry<NavKey> =
@@ -22,11 +24,7 @@ fun rememberEntryProvider(mainViewModel: MainViewModel): (NavKey) -> NavEntry<Na
             NavEntry(key) {
                 when (key) {
                     is Route.Lessons -> {
-                        LessonsListRoute(
-                            onNavigateToDetail = { lessonId ->
-                                mainViewModel.navigateTo(Route.LessonDetails(lessonId))
-                            }
-                        )
+                        SolarHarvesterScreen()
                     }
 
                     is Route.LessonDetails -> {

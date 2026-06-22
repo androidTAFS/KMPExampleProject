@@ -14,10 +14,19 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.SaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
+import exampleproject.composeapp.generated.resources.Res
+import exampleproject.composeapp.generated.resources.lucy_promo
+import exampleproject.composeapp.generated.resources.me
 import io.androidtafs.exampleproject.ui.component.AppNavRail
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.MeteoriteDefensePreview
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.MeteoriteDefenseScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.SolarHarvesterScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_5.FlappyBirdScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_5.FlappyState
 import io.androidtafs.exampleproject.ui.navigation.Route
 import io.androidtafs.exampleproject.ui.navigation.rememberEntryProvider
 import io.androidtafs.exampleproject.ui.theme.AndroidSchoolTheme
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun App(viewModel: MainViewModel = viewModel { MainViewModel() }) {
@@ -31,31 +40,8 @@ fun App(viewModel: MainViewModel = viewModel { MainViewModel() }) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            Row(modifier = Modifier.fillMaxSize()) {
-                val showNavRail = currentRoute is Route.Lessons || currentRoute is Route.Practice
-
-                if (showNavRail) {
-                    AppNavRail(
-                        currentRoute = currentRoute,
-                        onNavigate = { viewModel.navigateTo(it) }
-                    )
-                }
-
-                Box(modifier = Modifier.fillMaxSize()) {
-                    if (backStack.isNotEmpty()) {
-                        NavDisplay(
-                            backStack = backStack,
-                            onBack = { viewModel.goBack() },
-                            entryProvider = rememberEntryProvider(viewModel),
-                            entryDecorators = listOf(
-                                remember(saveableStateHolder) {
-                                    SaveableStateHolderNavEntryDecorator(saveableStateHolder)
-                                }
-                            )
-                        )
-                    }
-                }
-            }
+            FlappyBirdScreen(painterResource( Res.drawable.me), painterResource(Res.drawable.lucy_promo))
         }
+
     }
 }
