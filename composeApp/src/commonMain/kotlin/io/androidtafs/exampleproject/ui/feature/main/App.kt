@@ -23,6 +23,8 @@ import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.Meteorite
 import io.androidtafs.exampleproject.ui.feature.practice_holder.task_4.SolarHarvesterScreen
 import io.androidtafs.exampleproject.ui.feature.practice_holder.task_5.FlappyBirdScreen
 import io.androidtafs.exampleproject.ui.feature.practice_holder.task_5.FlappyState
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_6.SpaceShooterScreen
+import io.androidtafs.exampleproject.ui.feature.practice_holder.task_8.VisualNovelScreen
 import io.androidtafs.exampleproject.ui.navigation.Route
 import io.androidtafs.exampleproject.ui.navigation.rememberEntryProvider
 import io.androidtafs.exampleproject.ui.theme.AndroidSchoolTheme
@@ -40,7 +42,7 @@ fun App(viewModel: MainViewModel = viewModel { MainViewModel() }) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            FlappyBirdScreen(painterResource( Res.drawable.me), painterResource(Res.drawable.lucy_promo))
+            VisualNovelScreen()
         }
 
     }
