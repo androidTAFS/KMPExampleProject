@@ -17,3 +17,11 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 node_modules/
+
+# Teacher source code — students build their own from PDF lessons
+composeApp/src/commonMain/kotlin/io/androidtafs/exampleproject/teacher/
+
+# PDF lesson generator
+android_lesson.py
+Lesson_*.pdf
+/AGENTS.md
